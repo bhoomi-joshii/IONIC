@@ -8,21 +8,23 @@ export class RecipesService {
   private recipes: Recipe[] = [
     {
       id: 'r1',
-      title: 'Pizza',
-      imageUrl: 'https://homepages.cae.wisc.edu/~ece533/images/tulips.png',
-      ingredints: ['tometo', 'cheeze', 'onion'],
+      title: '201606100110113',
+      ingredints: ['45', '48', '50'],
     },
     {
       id: 'r2',
-      title: 'Sandwhich',
-      imageUrl: 'https://homepages.cae.wisc.edu/~ece533/images/peppers.png',
-      ingredints: ['tometo', 'bread', 'onion'],
+      title: '201606100110115',
+      ingredints: ['70', '72', '50'],
     },
     {
       id: 'r3',
-      title: 'cake',
-      imageUrl: 'https://homepages.cae.wisc.edu/~ece533/images/monarch.png',
-      ingredints: ['chocolate', 'milk', 'menda'],
+      title: '201606100110107',
+      ingredints: ['78', '28', '78'],
+    },
+    {
+      id: 'r4',
+      title: '201606100110102',
+      ingredints: ['96', '86', '78'],
     },
   ];
 
