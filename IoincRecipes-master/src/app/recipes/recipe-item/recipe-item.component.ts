@@ -7,9 +7,10 @@ import { Recipe } from '../recipe.modal';
   styleUrls: ['./recipe-item.component.scss'],
 })
 export class RecipeItemComponent implements OnInit {
-  @Input() recipeItem: Recipe;
 
-  constructor() {}
+  @Input() recipeItem: Recipe;
+  constructor() { }
 
   ngOnInit() {}
+
 }

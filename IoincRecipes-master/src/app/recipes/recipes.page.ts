@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from './recipe.modal';
 import { RecipesService } from './recipes.service';
+import { Recipe } from './recipe.modal';
 
 @Component({
   selector: 'app-recipes',
@@ -8,27 +8,16 @@ import { RecipesService } from './recipes.service';
   styleUrls: ['./recipes.page.scss'],
 })
 export class RecipesPage implements OnInit {
+
   recipes: Recipe[];
 
-  constructor(private recipesService: RecipesService) {}
+  constructor(private recipesService: RecipesService) { }
 
   ngOnInit() {
     this.recipes = this.recipesService.getAllRecipes();
   }
 
-  ionViewWillEnter() {
+  ionViewWillEnter(){
     this.recipes = this.recipesService.getAllRecipes();
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad');
-  }
-
-  ionViewDidEnter() {
-    console.log('ionViewDidEnter');
-  }
-
-  ionViewWillLeave() {
-    console.log('ionViewWillLeave');
   }
 }

@@ -1,34 +1,31 @@
-import { Injectable } from '@angular/core';
 import { Recipe } from './recipe.modal';
+import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class RecipesService {
   private recipes: Recipe[] = [
     {
       id: 'r1',
-      title: '201606100110113',
-      ingredints: ['45', '48', '50'],
+      title: 'Hagimaru',
+      imageUrl: 'https://homepages.cae.wisc.edu/~ece533/images/airplane.png',
+      ingredints: ['pogo', 'cable', 'power'],
     },
     {
       id: 'r2',
-      title: '201606100110115',
-      ingredints: ['70', '72', '50'],
+      title: 'Maggi',
+      imageUrl: 'https://homepages.cae.wisc.edu/~ece533/images/boat.png',
+      ingredints: ['maggie', 'water', 'maggi masala'],
     },
     {
       id: 'r3',
-      title: '201606100110107',
-      ingredints: ['78', '28', '78'],
-    },
-    {
-      id: 'r4',
-      title: '201606100110102',
-      ingredints: ['96', '86', '78'],
+      title: 'Doremon',
+      imageUrl: 'https://homepages.cae.wisc.edu/~ece533/images/girl.png',
+      ingredints: ['maggie', 'water', 'maggi masala'],
     },
   ];
-
-  constructor() {}
+  constructor() { }
 
   getAllRecipes() {
     return [...this.recipes];
@@ -42,7 +39,7 @@ export class RecipesService {
     };
   }
 
-  deleteRecipe(recipeId: string) {
+  deleteRecipe(recipeId: string){
     this.recipes = this.recipes.filter(recipe => {
       return recipe.id !== recipeId;
     });

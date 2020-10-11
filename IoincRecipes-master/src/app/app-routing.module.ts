@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'recipes',
-    pathMatch: 'full',
+    pathMatch: 'full'
   },
   {
     path: 'recipes',
@@ -18,8 +18,8 @@ const routes: Routes = [
       {
         path: ':recipeId',
         loadChildren: () =>
-          import('./recipes/recipes-detail/recipes-detail.module').then(
-            m => m.RecipesDetailPageModule
+          import('./recipes/recipes-details/recipes-details.module').then(
+            m => m.RecipesDetailsPageModule
           ),
       },
     ],
@@ -28,8 +28,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
